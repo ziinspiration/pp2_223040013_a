@@ -1,10 +1,10 @@
-package Sesi8.view.jenismember;
+package Sesi8.src.view.jenismember;
 
-import dao.JenisMemberDao;
+import Sesi8.src.dao.JenisMemberDao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.UUID;
-import model.JenisMember;
+import Sesi8.src.model.JenisMember;
 
 public class JenisMemberButtonSimpanActionListener implements ActionListener {
     private JenisMemberFrame jenisMemberFrame;

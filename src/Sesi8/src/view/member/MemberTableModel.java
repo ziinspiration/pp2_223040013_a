@@ -1,11 +1,11 @@
-package Sesi8.view.member;
+package Sesi8.src.view.member;
 
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import model.Member;
+import Sesi8.src.model.Member;
 
 public class MemberTableModel extends AbstractTableModel {
-    private String[] columnNames = {"Nama", "Jenis Member"};
+    private String[] columnNames = { "Nama", "Jenis Member" };
     private List<Member> data;
 
     public MemberTableModel(List<Member> data) {
@@ -27,14 +27,14 @@ public class MemberTableModel extends AbstractTableModel {
     public Object getValueAt(int row, int col) {
         Member rowItem = data.get(row);
         String value = "";
-        switch (col)
-        {
+        switch (col) {
             case 0:
                 value = rowItem.getNama();
                 break;
 
             case 1:
-                value = rowItem.getJenisMember().getNama(); break;
+                value = rowItem.getJenisMember().getNama();
+                break;
         }
         return value;
     }

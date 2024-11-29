@@ -1,11 +1,11 @@
-package Sesi8.view.jenismember;
+package Sesi8.src.view.jenismember;
 
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import model.JenisMember;
+import Sesi8.src.model.JenisMember;
 
 public class JenisMemberTableModel extends AbstractTableModel {
-    private String[] columnNames = {"Nama"};
+    private String[] columnNames = { "Nama" };
     private List<JenisMember> data;
 
     public JenisMemberTableModel(List<JenisMember> data) {

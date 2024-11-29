@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mapper namespace="mapper.JenisMemberMapper">
+
+    <!-- Insert -->
+    <insert id="insert" parameterType="Sesi8.src.model.JenisMember">
+        INSERT INTO jenis_member (id, nama)
+        VALUES (#{id}, #{nama})
+    </insert>
+
+    <!-- Update -->
+    <update id="update" parameterType="Sesi8.src.model.JenisMember">
+        UPDATE jenis_member
+        SET nama = #{nama}
+        WHERE id = #{id}
+    </update>
+
+    <!-- Delete -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM jenis_member WHERE id = #{id}
+    </delete>
+
+    <!-- Find All -->
+    <select id="findAll" resultType="Sesi8.src.model.JenisMember">
+        SELECT * FROM jenis_member
+    </select>
+
+</mapper>

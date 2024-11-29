@@ -1,12 +1,12 @@
-package Sesi8.view.main;
+package Sesi8.src.view.main;
 
-import dao.JenisMemberDao;
-import dao.MemberDao;
+import Sesi8.src.dao.JenisMemberDao;
+import Sesi8.src.dao.MemberDao;
 import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import view.jenismember.JenisMemberFrame;
-import view.member.MemberFrame;
+import Sesi8.src.view.jenismember.JenisMemberFrame;
+import Sesi8.src.view.member.MemberFrame;
 
 public class MainFrame extends JFrame {
     private JenisMemberFrame jenisMemberFrame;
@@ -16,10 +16,10 @@ public class MainFrame extends JFrame {
     private JenisMemberDao jenisMemberDao;
     private MemberDao memberDao;
 
-    public MainFrame(JenisMemberDao jenisMemberDao, MemberDao memberDao){
+    public MainFrame(JenisMemberDao jenisMemberDao, MemberDao memberDao) {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        this.setSize(400,500);
+        this.setSize(400, 500);
 
         this.jenisMemberDao = jenisMemberDao;
         this.memberDao = memberDao;

@@ -1,9 +1,9 @@
-package Sesi8.dao;
+package Sesi8.src.dao;
 
-import java.util.List;
-import model.Member;
+import Sesi8.src.model.Member;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import java.util.List;
 
 public class MemberDao {
 
@@ -13,35 +13,31 @@ public class MemberDao {
         this.sqlSessionFactory = sqlSessionFactory;
     }
 
+    // Insert
     public int insert(Member member) {
-        int result;
         try (SqlSession session = sqlSessionFactory.openSession()) {
-            result = session.insert("mapper.MemberMapper.insert", member);
+            return session.insert("mapper.MemberMapper.insert", member);
         }
-        return result;
     }
 
+    // Update
     public int update(Member member) {
-        int result;
         try (SqlSession session = sqlSessionFactory.openSession()) {
-            result = session.update("mapper.MemberMapper.update", member);
+            return session.update("mapper.MemberMapper.update", member);
         }
-        return result;
     }
 
-    public int delete(Member member) {
-        int result;
+    // Delete
+    public int delete(int id) {
         try (SqlSession session = sqlSessionFactory.openSession()) {
-            result = session.delete("mapper.MemberMapper.delete", member);
+            return session.delete("mapper.MemberMapper.delete", id);
         }
-        return result;
     }
 
+    // Find all
     public List<Member> findAll() {
-        List<Member> result;
         try (SqlSession session = sqlSessionFactory.openSession()) {
-            result = session.selectList("mapper.MemberMapper.findAll");
+            return session.selectList("mapper.MemberMapper.findAll");
         }
-        return result;
     }
 }

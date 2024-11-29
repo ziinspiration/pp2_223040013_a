@@ -1,4 +1,4 @@
-package Sesi8.view.main;
+package Sesi8.src.view.main;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
